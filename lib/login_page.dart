@@ -156,11 +156,17 @@ class _LoginPageState extends State<LoginPage> {
             if (loginsuccess) {
               //tipousuario = controllerapp.text;
               if (appusuario == tipo_cliente) {
-                Navigator.pushReplacementNamed(context, '/cliente_page');
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    '/cliente_page', (Route<dynamic> route) => false);
+                //Navigator.pushReplacementNamed(context, '/cliente_page');
               } else if (appusuario == tipo_organizador) {
-                Navigator.pushReplacementNamed(context, '/organizador_page');
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    '/organizador_page', (Route<dynamic> route) => false);
+                //Navigator.pushReplacementNamed(context, '/organizador_page');
               } else if (appusuario == tipo_fotografo) {
-                Navigator.pushReplacementNamed(context, '/fotografo_page');
+                Navigator.of(context).pushNamedAndRemoveUntil(
+                    '/fotografo_page', (Route<dynamic> route) => false);
+                // Navigator.pushReplacementNamed(context, '/fotografo_page');
               }
             } else {
               showDialog(
