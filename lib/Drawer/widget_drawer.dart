@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:software_proyect/global_var.dart';
 
 class MenuLateral extends StatelessWidget {
   const MenuLateral({Key? key}) : super(key: key);
@@ -57,7 +58,12 @@ class MenuLateral extends StatelessWidget {
             leading: const Icon(Icons.bedtime_rounded),
             title: const Text('Log Out'),
             onTap: () {
-              Navigator.pushNamed(context, '/login_page');
+              tipousuario = "";
+              // ignore: avoid_print
+              print(tipousuario);
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/login_page', (Route<dynamic> route) => false);
+              //Navigator.pushNamed(context, '/login_page');
             },
           ),
         ],

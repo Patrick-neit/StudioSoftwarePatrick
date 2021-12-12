@@ -6,7 +6,7 @@ import 'package:software_proyect/models/login_register.dart';
 
 class LoginService {
   Future<bool> loginregister(LoginUser loginUser) async {
-    const url = 'http://127.0.0.1:8000/api/autentificar';
+    const url = 'http://127.0.1:8000/api/autentificar';
     var log = loginUserToMap(loginUser);
     final response = await http.post(
       Uri.parse(url),
@@ -21,7 +21,7 @@ class LoginService {
       nombreusuarioautentificado = data['nombre'];
       tipousuario = data['tipo'];
       // ignore: avoid_print
-      print(log);
+      print(tipousuario);
       return true;
     } else {
       // ignore: avoid_print

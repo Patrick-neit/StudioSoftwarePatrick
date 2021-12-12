@@ -153,6 +153,8 @@ class _LoginPageState extends State<LoginPage> {
 
             // if (appusuario == tipouser) {} //Si mi tipo_cliente es cliente
             bool loginsuccess = await LoginService().loginregister(loginUser);
+            // ignore: avoid_print
+            //print(appusuario);
             if (loginsuccess) {
               //tipousuario = controllerapp.text;
               if (appusuario == tipo_cliente) {
@@ -166,7 +168,7 @@ class _LoginPageState extends State<LoginPage> {
               } else if (appusuario == tipo_fotografo) {
                 Navigator.of(context).pushNamedAndRemoveUntil(
                     '/fotografo_page', (Route<dynamic> route) => false);
-                // Navigator.pushReplacementNamed(context, '/fotografo_page');
+                //Navigator.pushReplacementNamed(context, '/fotografo_page');
               }
             } else {
               showDialog(

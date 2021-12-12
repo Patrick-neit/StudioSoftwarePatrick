@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:software_proyect/global_var.dart';
 
 class MenuFotografo extends StatelessWidget {
   const MenuFotografo({Key? key}) : super(key: key);
@@ -57,7 +58,10 @@ class MenuFotografo extends StatelessWidget {
             leading: const Icon(Icons.bedtime_rounded),
             title: const Text('Log Out'),
             onTap: () {
-              Navigator.pushNamed(context, '/login_page');
+              tipousuario = "";
+              Navigator.of(context).pushNamedAndRemoveUntil(
+                  '/login_page', (Route<dynamic> route) => false);
+              //Navigator.pushNamed(context, '/login_page');
             },
           ),
         ],

@@ -39,7 +39,7 @@ class _FotografoPageState extends State<FotografoPage> {
         drawer: const MenuFotografo(),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () {
-            Navigator.pushReplacementNamed(context, '/listado_events_page');
+            Navigator.pushReplacementNamed(context, '/album_fotografo_create');
           },
           label: const Text('Crear Album'),
           icon: const Icon(Icons.album_rounded),
