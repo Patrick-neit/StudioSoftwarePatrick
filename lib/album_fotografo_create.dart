@@ -52,49 +52,9 @@ class _AlbumFotografoCreateState extends State<AlbumFotografoCreate> {
         drawer: const MenuFotografo(),
         floatingActionButton: FloatingActionButton.extended(
           onPressed: () async {
-            AlbumCreate albumCreate = AlbumCreate(
-              cantidadFotos: controllercantidad.text,
-              precio: controllerprecio.text,
-              fotografoId: idusuario,
-            );
-
-            bool albumSucces = await AlbumService().albumregister(albumCreate);
-            if (albumSucces) {
-              showDialog(
-                context: context,
-                barrierDismissible: true,
-                builder: (context) => AlertDialog(
-                  title: const Text('Album Creado'),
-                  //content: const Text('Volver'),
-                  actions: <Widget>[
-                    // ignore: deprecated_member_use
-                    FlatButton(
-                        onPressed: () {
-                          Navigator.pushReplacementNamed(
-                              context, '/fotografo_page');
-                        },
-                        child: const Text('Back')),
-                  ],
-
-                  //backgroundColor: Colors.redAccent,
-                  //shape: CircleBorder(),
-                ),
-              );
-            } else {
-              showDialog(
-                context: context,
-                barrierDismissible: true,
-                builder: (context) => const AlertDialog(
-                    title: Text('Re check the information|| Empty values'),
-                    content: Text('Back')
-
-                    //backgroundColor: Colors.redAccent,
-                    //shape: CircleBorder(),
-                    ),
-              );
-            }
+            Navigator.pushReplacementNamed(context, '/listado_albums_page');
           },
-          label: const Text('Crear Album'),
+          label: const Text('Ver Albums'),
           icon: const Icon(Icons.album_rounded),
         ),
       ),
@@ -157,6 +117,8 @@ class _AlbumFotografoCreateState extends State<AlbumFotografoCreate> {
           );
 
           bool albumSucces = await AlbumService().albumregister(albumCreate);
+          // ignore: avoid_print
+          print(albumSucces);
           if (albumSucces) {
             showDialog(
               context: context,

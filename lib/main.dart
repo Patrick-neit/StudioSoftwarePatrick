@@ -3,6 +3,7 @@ import 'package:software_proyect/album_fotografo_create.dart';
 import 'package:software_proyect/cliente_page.dart';
 import 'package:software_proyect/fotografo_page.dart';
 import 'package:software_proyect/list_fotografos_page.dart';
+import 'package:software_proyect/listado_albums_page.dart';
 import 'package:software_proyect/listado_events_page.dart';
 import 'package:software_proyect/locations/event_location.dart';
 
@@ -43,6 +44,7 @@ class StudioSoftwareApp extends StatelessWidget {
         '/payment_stack': (BuildContext context) => const MyPayment(),
         '/album_fotografo_create': (BuildContext context) =>
             const AlbumFotografoCreate(),
+        '/listado_albums_page': (BuildContext context) => const AlbumsListView()
       },
     );
   }
