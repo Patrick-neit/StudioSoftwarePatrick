@@ -32,28 +32,32 @@ class _AlbumsListViewState extends State<AlbumsListView> {
                   Album item = snapshot.data![index];
                   return Column(children: [
                     ListTile(
-                        leading: const Icon(Icons.date_range_sharp),
+                        leading:
+                            const Icon(Icons.format_list_numbered_rtl_outlined),
                         title: Text('Album #:   ' + item.id.toString())),
                     ListTile(
-                        leading: const Icon(Icons.anchor_rounded),
+                        leading: const Icon(Icons.verified_user_rounded),
                         title: Text(
                           'Nombre del Fotografo:   ' + item.nombreCompleto,
                         )),
                     ListTile(
-                      leading: const Icon(Icons.near_me_rounded),
+                      leading: const Icon(Icons.money_off_csred_sharp),
                       title: Text('Precio de contratacion:   ' +
                           item.tarifaContratacion),
                     ),
                     ListTile(
-                        leading:
-                            const Icon(Icons.format_list_numbered_rtl_rounded),
+                        leading: const Icon(Icons.photo_album_outlined),
                         title: Text('Cantidad de Fotos del Album:   ' +
-                            item.cantidadFotos),
+                            item.cantidadFotos +
+                            'fotos'),
                         subtitle: const Text('Click para ver fotos'),
                         onTap: () {}),
                     ListTile(
-                        leading: const Icon(Icons.charging_station_rounded),
-                        title: Text('Precio del Album:   ' + item.precio)),
+                      leading: const Icon(Icons.monetization_on_rounded),
+                      title: Text('Precio del Album:   ' + item.precio + 'bs'),
+                      tileColor: (Colors.greenAccent),
+                      onTap: () {},
+                    ),
                     const ListTile(
                         title: Text(
                             '-------------------------------------------------------------------')),

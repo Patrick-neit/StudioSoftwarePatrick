@@ -34,10 +34,10 @@ class MenuCliente extends StatelessWidget {
             },
           ),
           ListTile(
-            leading: const Icon(Icons.analytics_rounded),
-            title: const Text('Mis Datos'),
+            leading: const Icon(Icons.photo_album),
+            title: const Text('Ver Albums'),
             onTap: () {
-              // Navigator.pushNamed(context, '/listadoempleado');
+              Navigator.pushNamed(context, '/albums_ofertados_list');
             },
           ),
           ListTile(

@@ -47,30 +47,24 @@ class _ClientePageState extends State<ClientePage> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               //const Spacer(),
-              Image.asset(
-                'assets/images/clientepage.png',
-                height: 80.0,
-              ),
+              const Text('Whats on your mind today?',
+                  style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold)),
+
               const SizedBox(
                 height: 20.0,
               ),
               image != null
                   ? ClipOval(
                       child: Image.file(image!,
-                          width: 160, height: 160, fit: BoxFit.cover),
+                          width: 200, height: 180, fit: BoxFit.cover),
                     )
-                  : const Text(
-                      'Whats on your mind?',
-                      style:
-                          TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                    ),
-              FloatingActionButton.extended(
-                  onPressed: () {
-                    pickimage(ImageSource.gallery);
-                  },
-                  label: const Text('Elegir de Galeria'),
-                  icon: const Icon(Icons.image_outlined),
-                  backgroundColor: Colors.redAccent),
+                  : FloatingActionButton.extended(
+                      onPressed: () {
+                        pickimage(ImageSource.gallery);
+                      },
+                      label: const Text('Elegir de Galeria'),
+                      icon: const Icon(Icons.image_outlined),
+                      backgroundColor: Colors.redAccent),
               const SizedBox(
                 height: 20,
               ),
