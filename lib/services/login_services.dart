@@ -6,7 +6,7 @@ import 'package:software_proyect/models/login_register.dart';
 
 class LoginService {
   Future<bool> loginregister(LoginUser loginUser) async {
-    const url = 'http://10.0.2.2:8000/api/autentificar';
+    const url = 'http://getdataproject.com/ficct/public/api/autentificar';
     var log = loginUserToMap(loginUser);
     final response = await http.post(
       Uri.parse(url),

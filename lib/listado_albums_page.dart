@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:software_proyect/Drawer/widget_drawer.dart';
+
+import 'package:software_proyect/Drawer/widget_drawer_fotografo.dart';
 import 'package:software_proyect/models/album_list_register.dart';
 
 import 'package:software_proyect/services/album_list_service.dart';
@@ -20,7 +21,7 @@ class _AlbumsListViewState extends State<AlbumsListView> {
           title: const Text('Mis Albums'),
           actions: const <Widget>[],
         ),
-        drawer: const MenuLateral(),
+        drawer: const MenuFotografo(),
         body: FutureBuilder<List<Album>>(
           future: AlbumListService().getlistalbumes(),
           builder: (BuildContext context, AsyncSnapshot<List<Album>> snapshot) {

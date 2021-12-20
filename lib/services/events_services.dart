@@ -3,7 +3,7 @@ import 'package:software_proyect/models/event_register.dart';
 
 class EventRegisterService {
   Future<bool> eventsregister(EventRegister eventRegister) async {
-    const url = 'http://10.0.2.2:8000/api/crear/evento';
+    const url = 'http://getdataproject.com/ficct/public/api/crear/evento';
     var event = eventRegisterToMap(eventRegister);
     final response = await http.post(
       Uri.parse(url),

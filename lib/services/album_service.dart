@@ -3,7 +3,7 @@ import 'package:software_proyect/models/album_register.dart';
 
 class AlbumService {
   Future<bool> albumregister(AlbumCreate albumCreate) async {
-    const url = 'http://10.0.2.2:8000/api/crear/album';
+    const url = 'http://getdataproject.com/ficct/public/api/crear/album';
     var album = albumCreateToMap(albumCreate);
     final response = await http.post(
       Uri.parse(url),

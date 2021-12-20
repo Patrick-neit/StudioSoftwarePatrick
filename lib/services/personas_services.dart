@@ -3,7 +3,7 @@ import 'package:software_proyect/models/personas_register.dart';
 
 class PersonasRegisterService {
   Future<bool> personasregister(RegisterUser registerUser) async {
-    const url = 'http://10.0.2.2:8000/api/registrar-usuario';
+    const url = 'http://getdataproject.com/ficct/public/api/registrar-usuario';
     var per = registerUserToMap(registerUser);
     final response = await http.post(
       Uri.parse(url),
